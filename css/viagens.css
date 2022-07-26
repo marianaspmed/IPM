@@ -1,0 +1,619 @@
+.barra_superior {
+    width: auto;
+    height: 35px;
+    display: block;
+    position: relative;
+}
+.barra_superior p{
+    font-size: 20px;
+    position: absolute;
+    left: 55px;
+    top: -10px;
+}
+
+.p_cab{
+    text-align: center;
+    margin: 10px;
+}
+
+.opcoes2 {
+    margin-top: 15px;
+    border:double;
+    background: #B95D2E; 
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-y: scroll;
+    height:150px;
+}
+.opcoes label{
+    border-color: white;
+}
+.opcoes {
+    margin-top: 15px;
+    border:double;
+    background: #B95D2E; 
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-y: scroll;
+    height:auto;
+}
+.opcoes_voo {
+    margin-top: -15px;
+    border:double;
+    background: #B95D2E; 
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-y: scroll;
+    max-height:100px;
+}
+.opcoes a{
+    display:block;
+    height:40px;
+    display: flex;
+    align-items: center; 
+    font-size: 20px;
+    background:transparent; 
+    color: white;       
+    text-decoration:none;
+    padding-left: 10px;      
+    border:solid 2px white;
+}
+.datas {
+    width: auto;
+    border:double;
+    background: #B95D2E; 
+    margin: 5px;
+    overflow-y: scroll;
+    max-height:230px;
+}
+
+.datas a{
+    display: block;
+    height:auto;
+    align-items: center; 
+    font-size: 20px;
+    color: white;       
+    text-decoration:none;
+    padding-left: 10px;      
+    border:solid 2px white;
+}
+
+.lista {
+    border:double;
+    background: #B95D2E; 
+    width:auto;
+    overflow-y: scroll;
+    height: auto;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.entrada{
+    vertical-align: middle;
+    height:50px;
+    border: solid 1px white;
+    font-size: 22px;
+}
+.entrada a{
+    display:inline-block;
+    width: auto;
+    align-items: center; 
+    font-size: 16px;
+    color: white;       
+    text-decoration:none;
+    padding-left: 5px;
+}
+.entrada button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-right: 5px;
+}
+.lixo{
+    width:25px; 
+    height:25px;
+}
+
+/*planos de viagem*/
+.roteiro{
+    position: relative;
+    font-size:15px;
+    margin-top:-20px;
+    height: 150px;
+    overflow-y: scroll;
+}
+.roteiro h3{
+    padding-left: 40px;
+    padding-right: 10px;
+    
+    }
+.roteiro h4{
+    padding-left: 20px;
+    padding-right: 10px;
+    }
+.roteiro p{
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+
+
+
+
+
+#menuGP a {
+    display:block;
+    height:50px;
+    display: flex;
+    align-items: center; 
+    font-size: 16px;
+    background:#B95D2E; 
+    color: white;       
+    text-decoration:none;
+    text-align: center;
+    padding-left: 10px;
+    padding: 5px;       
+    border-bottom:solid 1px #B95D2E;
+
+}
+
+.searchTerm {
+    float: left;
+    width: 100%;
+    border: 2px solid #B95D2E;
+    padding: 5px;
+    height: 20px;
+    border-radius: 3px;
+    outline: none;
+    color: #B95D2E;
+    margin-top:3px;
+}
+
+.searchTerm:focus{
+    color: #B95D2E;
+}
+
+.searchButton {
+    border: 1px solid #B95D2E;
+    background: #B95D2E;
+    margin-top:2px;
+}
+
+a.backButton{
+    background-color: #B95D2E;
+}
+
+/*----------------Language Picker-----------------*/
+
+.langs{
+    background-color: #B95D2E;
+    font-size: 16px;
+    color: white;
+    
+    margin-left: 38px;
+    width:160px;
+    margin-top:20px;
+    overflow: hidden;
+    height: 30px;
+
+}
+
+.optionlangs{
+    line-height: 10px;
+}
+
+
+/* ------------------------------------------------------------------------------ */
+
+/* Fixed sidenav, full height */
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+    background-color: green;
+    color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+    float: right;
+    padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/*--------------------------Notificacoes------------------------------------*/
+
+.checkin{
+    font-size: 1.2em;
+    padding-left:50px;
+}
+
+.checkinAviso{
+    font-size:20px;
+    margin-left:20px;
+}
+div.categorias {
+    background: #008000;
+    height: 10px;
+    vertical-align:middle; 
+    
+}
+
+div.categorias a {
+    background:#008000;
+    font-size:18px;
+    padding-top:10px;
+    
+}
+
+.categorias img{
+    width: 20px;
+    height: 20px;
+}
+
+
+
+#titleLoc{
+    background-color: #f9d3c5;
+    text-align: center;
+    width: auto;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    margin-top:3px;
+    padding-left:25px;
+}
+
+#titleLoc img{
+    width:20px;
+    height: auto;
+    margin-left:10px;
+    margin-right: 10px;
+}
+
+#warningCenter{
+  
+  text-align: center;
+}
+
+#alinhamentoBotao{
+   width:300px;
+   height: 30px;
+}  
+.check{
+    margin-top:6px;
+}
+
+/*--------------------Filtro Plano Viagens-------------------------*/
+
+#langs, #transport, #estacao{
+    background-color: #B95D2E;
+}
+
+.switch--shadow:checked + label:before {
+    background-color: #f4d2c1;
+}
+
+/*-------------------Reserva de Transporte-------------------------*/
+
+.origem{
+    width: 35px;
+    margin-left:183px;
+}
+.idaevolta{
+    width:300px; 
+    height:35px;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top:5px;
+}
+
+.ida{
+    margin-top:30px;
+    width: 130px;
+    margin-left:20px;
+    border: 2px solid #B95D2E;
+    padding: 5px;
+    height: 15px;
+    border-radius: 3px;
+    outline: none;
+    color: #B95D2E;
+    
+
+}
+
+.volta{
+    margin-top:50px;
+    width: 130px;
+    margin-left:8px;
+    border: 2px solid #B95D2E;
+    padding: 5px;
+    height: 15px;
+    border-radius: 3px;
+    outline: none;
+    color: #B95D2E;
+    
+}
+
+
+.dia{
+    margin-top:30px;
+    width: 130px;
+    margin-left:20px;
+    border: 2px solid #B95D2E;
+    padding: 5px;
+    height: 15px;
+    border-radius: 3px;
+    outline: none;
+    color: #B95D2E; 
+    overflow-y: scroll;
+}
+
+.move{
+    text-align: center;
+    float: right;
+    margin-top: 20px;
+    margin-right: 10px;
+    background:#B95D2E;
+    font-size:18px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    border:none;
+    padding: 5px;
+
+}
+
+.opcoesAeroportos{
+    margin-top: 15px;
+    border:double;
+    background: #B95D2E; 
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-y: scroll;
+    height:180px;
+}
+
+.opcoesAeroportos a{
+    display:block;
+    height:40px;
+    display: flex;
+    align-items: center; 
+    font-size: 16px;
+    background:transparent; 
+    color: white;       
+    text-decoration:none;
+    padding-left: 10px;      
+    border:solid 2px white;
+}
+/*-------------------Passageiros----------------------------*/
+.type {
+    color: #444;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5em;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    background-color: #F1AC87;
+    border: #5390ac
+    height:35px; 
+}
+
+.button_mais_menos{
+    width: 35px;
+    height: 35px;
+    background-color:#B95D2E;
+    color:white;
+    margin-top:5px;
+    margin-bottom: 5px; 
+
+
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active{
+    background-color: #B95D2E;
+    background-color: #B95D2E;
+    color: white;
+}
+
+.submit{
+    width: 100%;
+    background-color: #B95D2E;
+    color: white;
+    font-size: 1.30em;
+    margin-top: 2px;
+    height: 35px;
+    cursor: pointer;
+}
+
+/*---------------------------Bilhete-------------------------*/
+
+.qrcode{
+    width: 130px;
+    border: 10px solid #B95D2E;
+    margin-left: 43px;
+}
+
+.cabecalho_categoria{
+  left: 80px;
+  border:1;
+  font-size: 17px;
+  width: 200px;
+
+}
+
+.destinos{
+    text-align: center;
+    font-size:12px;
+}
+
+.nomePassageiro{
+    text-align: center;
+    font-size:12px;
+    margin-top:3px;
+}
+/*---------------------Companhias----------------------*/
+.companhia{
+    font-size:20px;
+}
+
+/*--------------------Dados do Passageiro------------------*/
+.dados{
+    margin-left:10px;
+}
+
+/*-------------------Próximas Viagens----------------------*/
+.infoBilhete{
+    font-size:15px;
+
+}
+
+.infoBilheteDatas{
+    font-size:13px;    
+}
+
+
+/*-----------------Lista Planos de Viagem-------------------*/
+
+#lixo1{
+    margin-left:30px;
+}
+
+#lixo3{
+    margin-left:52px;
+}
+
+#lixo4{
+    margin-left:10px;
+}
+
+/*-------------------------Pagamento-------------------------*/
+.listaPagamento {
+    width: 215px;
+    
+    border:double;
+    background: #B95D2E; 
+    margin-left: 5px;
+    margin-right: 10px;
+    overflow-y: scroll;
+   
+}
+
+.listaPagamento a{
+    display:block;
+    height:40px;
+    background:transparent; 
+    color: white;       
+    text-decoration:none;
+    border:solid 2px white;
+    font-size: 13px;
+    padding-top:3px;
+}
+
+
+/*-----------------Reserva de Transporte-------------------*/
+#date1{
+    margin-left:18px;      
+}
+
+#date2{
+    margin-left:5px;
+}
+
+/*-----------------Via Bilhete----------------------------*/
+.opcoes3 {
+    margin-top: 15px;
+    border:double;
+    background: #B95D2E; 
+    
+    margin-right: 17px;
+    overflow-y: scroll;
+    height:auto;
+}
+.opcoes3 a{
+    display:block;
+    height:40px;
+    display: flex;
+    align-items: center; 
+    font-size: 20px;
+    background:transparent; 
+    color: white;       
+    text-decoration:none;
+    padding-left: 10px;      
+    border:solid 2px white;
+}
+
+/*METODOS PAGAMENTO*/
+
+.opcoes_pagamento {
+border:none;
+background: #B95D2E; 
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 10px;
+max-height: 195px;
+overflow-y: scroll;
+}
+
+
+.opcoes_pagamento a {
+    display: flex;
+    height:40px;
+    align-items: center; 
+    font-size: 16px;
+    color: white;         
+    border-bottom:solid 3px white;
+    cursor: pointer;
+}

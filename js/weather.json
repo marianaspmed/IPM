@@ -1,0 +1,18 @@
+    data = '[
+    {
+        "icon": "sunny.png",
+        "weath": "Sol",
+        "temp": "22"},
+	{
+        "icon": "cloudy.png",
+        "weath": "Céu muito nublado",
+        "temp": "19"},
+	{
+        "icon": "rainny.png",
+        "weath": "Períodos de chuva",
+        "temp": "16"},
+    {
+       "icon": "snow.png",
+        "weath": "Neve",
+        "temp": "0"}
+		]';
