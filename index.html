@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="iGO">
+        <meta name="author" content="Inês Alves, Mariana Medeiros, Miguel Silva">
+        <meta name="generator" content="Sublime">
+        <title>iGO</title>
+
+
+        <!-- Css personalizada do iGO -->
+        <link href="css/igostyle.css" rel="stylesheet">
+        <link href="css/viagens.css" rel="stylesheet">
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/igojquery.js" type="text/javascript"></script>
+
+    </head>
+    <body class="bg-light">
+
+        <div class="container">
+            <!-- navbar fixa -->
+            <nav class="navbar">
+                <ul>
+                    <li><a class="mweb" href="settings.html"><img class="home" src="images/settings.svg" /></a></li>
+                    <li><a href="#contact"><img src="images/bluetooth.png" /></a></li>
+                    <li><a href="netSettings.html"><img src="images/wifi.png" /></a></li>
+                </ul>
+            </nav>
+            <div id="divTime">
+                <span class="navbar-text" id="Time"></span><br/>
+                <span class="navbar-text" id="Date"></span>  
+            </div>
+            <div id="divWeather">
+                <img id="imgm"/>&nbsp;
+                <span id="meteo"></span>, <span id="temp"></span>º	
+            </div>
+            <div id="divSteps">
+                <img id="imgs"title="steps"/><span id="steps"></span>
+            </div>
+            <div id="mainDiv">
+                <div id="divOne" class="boxes">
+                    <a id="scrollDown" href="settings.html" title="Definições" class="link"><img src="images/scrollDown.png" /></a>
+                </div>
+                <div id="divTwo" class="boxes">
+                    <a id="scrollRight" href="menu.html" title="Menu" class="link"><img src="images/scrollRight.jpg" /></a>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

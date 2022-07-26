@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="iGO">
+        <meta name="author" content="Inês Alves, Mariana Medeiros, Miguel Silva">
+        <meta name="generator" content="Sublime">
+        <title>iGO</title>
+
+        <link href="css/igostyle.css" rel="stylesheet">
+        <link href="css/myWeb.css" rel="stylesheet">
+        <link href="css/settings.css" rel="stylesheet">
+        <link href="css/viagens.css" rel="stylesheet">
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/igojquery.js" type="text/javascript"></script>
+        <script src="js/iGO.js" type="text/javascript"></script>
+
+    </head>
+    <body class="bg-light">
+
+        <div class="container">
+            <nav class="navbar">
+                <ul>
+                    <li style="margin-top:8px"><span style="color: white;font-size:1.2em; margin-left:5px" id="Time"></span></li>
+                    <li style="width: 30px">&nbsp;</li>
+                    <li><a class="mweb" href="index.html"><img src="images/home.svg" class="home" /></a></li>
+                    <li><a href="#contact"><img src="images/bluetooth.png" /></a></li>
+                    <li><a href="#about"><img src="images/wifi.png" /></a></li>
+                </ul>
+            </nav>
+
+            <!-- ECRA NUMERO PASSAGEIROS -->
+
+        <div id="ecra1" style="display: block;">
+            <div class="search"> 
+                <div style="width:300px; height:35px;">
+                    <a onclick="goBack()" class="backButton">
+                        <img src="images/seta.png" height="35" width="30">
+                    </a>
+                    <p class="pagamento2" style="font-size: 16px;width:200px;left: 55px;margin-top:20px;"> Reserva de Transporte</p> 
+                </div>
+            </div>
+            <p class="p_cab" id="margem">Passageiros:</p>
+            <div style="height:170px;overflow: scroll">
+                <div id="proto" class="section">
+                    <button class="type">Criança - 130€</button>
+                    <div class="content">
+                        <div id="au_inner" class="inner_section">
+                            <input type="button" class="button_mais_menos" onclick="decrementValue('number1')" value="-" />
+                            <input type="text" name="quantity2" value="0" maxlength="2" max="10" size="1" id="number1" />
+                            <input type="button" class="button_mais_menos" onclick="incrementValue('number1')" value="+" />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div id="au" class="section">
+                    <button class="type">Adulto - 240€</button>
+                    <div class="content">
+                        <div id="au_inner" class="inner_section">
+                            <input type="button" class="button_mais_menos" onclick="decrementValue('number2')" value="-" />
+                            <input type="text" name="quantity3" value="0" maxlength="2" max="10" size="1" id="number2" />
+                            <input type="button" class="button_mais_menos" onclick="incrementValue('number2')" value="+" />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                <div id="au" class="section">
+                    <button class="type">Bebé - 60€</button>
+                    <div class="content">
+                        <div id="au_inner" class="inner_section">
+                            <input type="button" class="button_mais_menos" onclick="decrementValue('number3')" value="-" />
+                            <input type="text" name="quantity3" value="0" maxlength="2" max="10" size="1" id="number3" />
+                            <input type="button" class="button_mais_menos" onclick="incrementValue('number3')" value="+" />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a onclick="atualiza_bilhetes();alterna_1_2();"><input type="submit" value="Continuar" class="submit"></a>
+            </div>
+
+            <!-- ECRA PAGAMENTO BILHETES -->
+            <div id="ecra2" style="display: none;">
+                <div class="pagamento"> 
+                    <div style="width:300px; height:35px;">
+                    <a onclick="alterna_2_1();" class="backButton">
+                        <img src="images/seta.png" height="35" width="30">
+                    </a>
+                    <div>
+                        <p class="pagamento2"> Pagamento</p>
+                        <img class="pay" src="images/pay.png" height="35" width="35">
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ecra confirmacao pagamento -->
+            <div id="ecra3" style="display: none;"></div>
+
+        </div>
+        <script>
+        var bilhete_crianca;
+        var bilhete_adulto;
+        var bilhete_bebe;
+        var preco;
+        var exterminar;
+        function atualiza_bilhetes(){
+            bilhete_crianca = parseInt(document.getElementById('number1').value, 10);
+            bilhete_crianca = isNaN(bilhete_crianca) ? 0 : bilhete_crianca;
+            bilhete_adulto = parseInt(document.getElementById('number2').value, 10);
+            bilhete_adulto = isNaN(bilhete_adulto) ? 0 : bilhete_adulto;
+            bilhete_bebe = parseInt(document.getElementById('number3').value, 10);
+            bilhete_bebe = isNaN(bilhete_bebe) ? 0 : bilhete_bebe;}
+        function alterna_1_2(){
+            var x = document.getElementById('ecra1');
+            var y = document.getElementById('ecra2');
+            x.style.display="none";
+            y.style.display="block";
+            pagamento('ecra2');}
+        function alterna_2_1(){
+            deleteDiv(exterminar);
+            var x = document.getElementById('ecra1');
+            var y = document.getElementById('ecra2');
+            y.style.display="none";
+            x.style.display="block";}
+        function alterna_2_3(){
+            var x = document.getElementById('ecra2');
+            var y = document.getElementById('ecra3');
+            x.style.display="none";
+            y.style.display="block";
+            confirmacao('ecra3');}
+        function pagamento(id){
+            var pagar=document.createElement('div');
+            pagar.className = 'div-table';
+            pagar.id="adeus";
+            exterminar=pagar.id;
+            var total=(bilhete_crianca*130)+(bilhete_adulto*240)+(bilhete_bebe*60);
+            preco = total.toString();
+            pagar.innerHTML = 
+            '<h2> Total: '+preco+'€</h2>\
+            <h4> Selecione o método de pagamento: </h4>\
+            <div class="opcoes_pagamento" style="height: auto;">\
+            <a onclick="alterna_2_3()"><img  class="locais" src="images/visa.png" >Cartão bancário</a>\
+            <a onclick="alterna_2_3()"><img  class="locais" src="images/paypal.png">PayPal - cris****@gmail.com</a>\
+            <a onclick="alterna_2_3()"><img  class="locais" src="images/mbway.png">MbWay - 93*****00</a>\
+            </div>';
+            var ecra=document.getElementById(id);
+            ecra.appendChild(pagar);}  
+
+        function confirmacao(id){
+            var alerta=document.createElement('div');
+            alerta.innerHTML='<img class="center" src="images/warning.svg" height="60" width="60">\
+               <p class="msg">  Deseja prosseguir com o pagamento? </p>\
+               <p class="msg">  '+preco+'€ </p>\
+               <table class="aviso" id="warning">\
+                   <tr>\
+                       <td><a href="doCheckin.html" class="yes">Sim</a></td>\
+                       <td><a href="index.html" class="no">Não</a></td>\
+                   </tr>\
+               </table>'
+            var ecra=document.getElementById(id);
+            ecra.appendChild(alerta);}    
+        </script>  
+    </body>
+</html>

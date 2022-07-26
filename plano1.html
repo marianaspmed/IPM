@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="iGO">
+        <meta name="author" content="Inês Alves, Mariana Medeiros, Miguel Silva">
+        <meta name="generator" content="Sublime">
+        <title>iGO</title>
+
+
+        <!-- Css personalizada do iGO -->
+        <link href="css/igostyle.css" rel="stylesheet">
+        <link href="css/myWeb.css" rel="stylesheet">
+        <link href="css/viagens.css" rel="stylesheet">
+
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/igojquery.js" type="text/javascript"></script>
+        <script src="js/iGO.js" type="text/javascript"></script>
+
+    </head>
+    <body class="bg-light">
+
+        <div class="container">
+            <!-- navbar fixa -->
+            <nav class="navbar">
+                <ul>
+                    <li style="margin-top:8px"><span style="color: white;font-size:1.2em; margin-left:5px" id="Time"></span></li>
+                    <li style="width: 30px">&nbsp;</li>
+                    <li><a class="mweb" href="#home"><img src="images/logo20.png" /></a></li>
+                    <li><a href="#contact"><img src="images/bluetooth.png" /></a></li>
+                    <li><a href="#about"><img src="images/wifi.png" /></a></li>
+                </ul>
+            </nav>
+            <div class="perfil">
+                <a onclick="goBack()"><img src="images/seta.png" class="retroceder"/></a>
+
+                <div class="dropdown">
+                    <img src="images/google_menu.png" class="menu_perfil" onclick="collapsable()" />
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="reservaViagensOrigem.html">Reservar esta viagem</a>
+                    </div>
+                </div>
+                <img src="images/coliseum.jpg" class="fotoCapa"/>
+                
+                <p class="nomePessoa">Férias em Roma</p>
+            </div>
+            <div class="roteiro">
+                <h3><img src="images/italy_flag.png" class="pin"/>Villas poderosas, o melhor tiramisú do mundo, um passeio de tuk-tuk e os aperitivos imperdíveis. Isto, e muito mais, num roteiro de quatro dias pela capital italiana.</h3>
+                <h4>Alojamento:</h4>
+                <p>Apesar de ser necessário andar muito a pé pela cidade, é importante ficar bem alojado, tanto o Hotel Anahi (cerca de 90 euros por noite sem pequeno almoço), perto da Praça de Popolo, como o Trevi B&B Roma (80 euros por noite com pequeno almoço), perto da Fontana di Trevi, são boas opções.</p>
+                <h4>Como ir do aeroporto para o centro:</h4>
+                <p>Fiumiccino: Apanhem um metro até ao centro, é cómodo e barato.<br>
+                Ciampino: Podem apanhar um autocarro da Terravision (4€) até Termini ou, se tiverem mais tempo, e quiserem poupar, podem apanhar um autocarro de serviço público até Anagnina (1,20€) e depois o metro (1,50€) até à estação mais próxima do vosso alojamento.</p>
+                <h4>Dia 1: A herança do Império Romano</h4>
+                <p>Comecem o vosso primeiro dia na capital italiana com uma visita a um dos grandes símbolos desta cidade, o Coliseu. O melhor é ir muito cedo para não serem apanhados em grandes filas. Outra sugestão é hora do almoço. O bilhete custa 12 euros e dá acesso também ao Palatino e Fórum Romano. Também podem tentar nas bilheteiras do Fórum Romano, normalmente, tem menos fila. Se estão a perguntar se vale a pena visitar este trio de locais, a resposta é simples, é imperdível para quem visita Roma. </p>
+                <h4>Dia 2: Pizzas, gelados e praças</h4>
+                <p>Lembram-se de terem terminado o vosso dia anterior na Fontana di Trevi? Já estão com saudades dela? Então que tal voltar a visitá-la? Façam-no, não se vão arrepender. Agora de dia atirem uma moeda à água, dizem que dá sorte e os que o fazem voltam à Cidade Eterna. Andem apenas uns metros para encontrarem o Panteão, uma das mais bem preservadas estruturas romanas antigas. Entrem, é gratuito, e olhem bem para cima e ao vosso redor.</p>
+                <h4>Dia 3: A força do Vaticano</h4>
+                <p>A visita ao Vaticano é dividida em duas partes, a Basílica de São Pedro e museus/Capela Sistina. No último domingo de cada mês, a visita aos museus é gratuita mas só é permitida a entrada até às 12h30, por isso fiquem atentos às horas. Caso a vossa visita não calhe no último domingo, recomendamos comprar os bilhetes para os museus, uma vez que a entrada na Basílica é gratuita, no site oficial, onde poderão encontrar ingressos com preços mais baixos, além de serem uma ótima estratégia para não ficar nas (enormes) filas de espera.Comecem então pela visita à Basílica de São Pedro, a maior e mais importante igreja do catolicismo. Em Roma irão encontrar muitas igrejas espalhadas pela cidade, mas nenhuma será como esta. Aqui é o berço da fé católica. Lá dentro, e isto é importante, não deixem de visitar as tumbas onde estão sepultados alguns dos antigos papas. Estar à frente da tumba de São Pedro é algo que não se esquece, bem como da obra-prima de Michelangelo, a Pietà.</p>
+                <h4>Dia 4: Villas nobres e aperitivos em Trastevere</h4>
+                <p>Destacamos aqui as duas mais importantes e de visita obrigatória: a Medicci e a Borghese. Calma, elas são vizinhas por isso não terão de andar muito, mas mesmo assim vão gastar uma manhã. Comecem bem cedo pela Borghese, passeiem no jardim antes de entrar nas suas galerias, uma das mais impressionantes entre as villas, contando com esculturas e pinturas de Bernini, Caravaggio, Leonardo da Vinci, Raffaello, Rubens, Ticiano. Não precisamos de dizer mais nada pois não? Recomenda-se fazer uma reserva antecipada na internet, mas a verdade é que das duas vezes que lá fomos compramos diretamente nas bilheteiras. O ingresso custa 11€.</p>
+                <!-- https://viagens.sapo.pt/planear/roteiros-planear/artigos/quatro-dias-para-viver-ao-ritmo-da-cidade-eterna -->
+            </div>
+
+        </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="iGO">
+        <meta name="author" content="Inês Alves, Mariana Medeiros, Miguel Silva">
+        <meta name="generator" content="Sublime">
+        <title>iGO</title>
+
+
+        <!-- Css personalizada do iGO -->
+        <link href="css/igostyle.css" rel="stylesheet">
+
+
+        <!-- javascript do iGO-->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/igojquery.js" type="text/javascript"></script>
+
+    </head>
+    <body class="bg-light">
+
+        <div class="container">
+            <!-- navbar fixa -->
+            <nav class="navbar">
+				<ul>
+					<li style="margin-top:8px"><span style="color: white;font-size:1.2em; margin-left:5px" id="Time"></span></li>
+					<li style="width: 30px">&nbsp;</li>
+		  			<li><a class="mweb" href="#home"><img src="images/logo20.png" /></a></li>
+		  			<li><a href="#contact"><img src="images/bluetooth.png" /></a></li>
+		  			<li><a href="#about"><img src="images/wifi.png" /></a></li>
+				</ul>
+			</nav>
+            <div class="search"> 
+                <div style="width:300px; height:35px;">
+                    <a onclick="goBack()" class="backButton">
+                        <img src="images/seta.png" height="35" width="30">
+                    </a>
+                    <div class="location">
+                        <img class="pin" src="images/pin.png" height="35" width="35">	
+                        <p class="towerHill">The Monument</p>		
+                    </div>
+                    <button type="submit" class="searchButton">
+                        <a href="poi_categorias.html"><img src="images/filterWhite.png" height="35" width="35"></a>
+                    </button>
+                </div>
+            </div>
+            <!-- ver a pora do css já-->
+
+            <div class="alerta">
+                <h4>The Monument foi construído entre 1671 e 1677 para recordar o grande incêndio de Londres.</h4>
+                <table align=center style="margin-top:-30px;margin-bottom: -10px;">
+                    <tr>
+                        <td width="7%"><img src="images/info.png" height="35" width="30"></td>
+                        <td width="93%"><p>É necessário ingresso para visitar o monumento.</p></td> 
+                    </tr>
+                </table>
+            </div>
+            <div class="lefnav" align="center" id="info">
+                <a href=adIngresso.html>&nbspAdquirir Ingressos</a>
+                <a href="escolha_transportes.html">&nbspObter Direções</a>
+            </div>
+            <p>&nbsp;</p>
+        </div>
+            <script>
+                function goBack() {
+                    window.history.back();
+                }
+            </script>
+    </body>
+</html>

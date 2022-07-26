@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="iGO">
+        <meta name="author" content="Inês Alves, Mariana Medeiros, Miguel Silva">
+        <meta name="generator" content="Sublime">
+        <title>iGO</title>
+
+        <link href="css/igostyle.css" rel="stylesheet">
+        <link href="css/myWeb.css" rel="stylesheet">
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/igojquery.js" type="text/javascript"></script>
+        <script src="js/iGO.js" type="text/javascript"></script>
+
+    </head>
+    <body class="bg-light">
+
+        <div class="container">
+        
+            <nav class="navbar">
+                <ul>
+                    <li style="margin-top:8px"><span style="color: white;font-size:1.2em; margin-left:5px" id="Time"></span></li>
+                    <li style="width: 30px">&nbsp;</li>
+                    <li><a class="mweb" href="index.html"><img class="home" src="images/home.svg" /></a></li>
+                    <li><a href="#contact"><img src="images/bluetooth.png" /></a></li>
+                    <li><a href="#about"><img src="images/wifi.png" /></a></li>
+                </ul>
+            </nav>
+        <div id="ecra1">
+            <div class="search"> 
+                <div style="width:300px; height:35px;">
+                    <a onclick="goBack()" class="backButton">
+                        <img src="images/seta.png" height="35" width="30">
+                    </a>
+                    <div class="location">
+                        <p class="pagamento2"> Catarina</p>        
+                    </div>
+                </div>
+            </div>
+            <div class="mensagem" id="conversacao">
+                <div class="container1">
+                    <img src="images/woman3.jpeg" alt="CatarinaPerfil" class="foto">
+                    <p>Olá Cristina  </p>
+                    <span class="time-right">13:00</span>
+                </div>
+                <div class="container1">
+                    <img src="images/perfil.jpg" alt="Myperfil" class="right">
+                    <p>Olá Catarina</p>
+                    <span class="time-left">13:01</span>
+                </div>
+                <div class="container1">
+                    <img src="images/woman3.jpeg" alt="CatarinaPerfil" class="foto">
+                    <p>Sabes se a Judite vai hoje ao jantar de aniversário do João?</p>
+                    <span class="time-right">13:02</span>
+                </div>
+                <div class="container1">
+                    <img src="images/perfil.jpg" alt="Myperfil" class="right">
+                    <p>Não sei. Vou-lhe perguntar</p>
+                    <span class="time-left">13:05</span>
+                </div>
+            </div>
+            <div class="search" style="margin-top:5px;width: 175px;margin-left:3px;">
+                <input type="text" class="searchTerm" placeholder="Escreva algo..." onclick="mostraTeclado('ecra1','ecra2')" readonly="Sarah">
+            </div>
+			<div>
+			<a href=""><img src="images/send.png"/></a>
+			</div>
+        </div>
+            <!-- ecra escrita mensagem -->
+             <div class="comentar" id="ecra2" >
+                <div class="search"> 
+                    <div style="width:300px; height:35px;margin-top:  -10px;">
+                        <a onclick="mostraTeclado('ecra2','ecra1')" class="backButton">
+                        <img src="images/seta.png" height="35" width="30">
+                        </a>
+                        <p class="pagamento2"> Mensagem</p>        
+                        <button type="submit" class="searchButton">
+                        <a onclick="concluir()"><img src="images/sendw.png" height="28" width="28"></a>
+                        </button>
+                    </div>
+                </div>
+                <form id="form" onsubmit="return false;">
+                    <input id="descricao" type="text" style="height: 30px;width: 225px;font-size: 20px;" >
+                </form>
+                <img src="images/t9.png" class="t9">   
+            </div>
+        </div>
+        <script>
+        function mostraTeclado(id1,id2){
+            var x = document.getElementById(id1);
+            var y = document.getElementById(id2);
+            x.style.display = "none";
+            y.style.display="block";
+        }
+		function concluir() {
+            var new_msg=document.createElement('div');
+            var escrever = document.getElementById("descricao").value;
+            new_msg.className = 'container1';
+            var  hours = new Date().getHours();
+            var minutes = new Date().getMinutes();
+            var hora=hours+':'+minutes;
+            new_msg.innerHTML ='<img src="images/perfil.jpg" alt="Myperfil" class="right">\
+                                <p>'+escrever+'</p>\
+                                <span class="time-left">'+hora+'</span>';
+            var feed = document.getElementById('conversacao');
+            feed.appendChild(new_msg);
+            mostraTeclado('ecra2','ecra1');}
+        </script>
+    </body>
+</html>
+        

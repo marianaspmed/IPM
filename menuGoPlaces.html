@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="iGO">
+        <meta name="author" content="Inês Alves, Mariana Medeiros, Miguel Silva">
+        <meta name="generator" content="Sublime">
+        <title>iGO</title>
+
+
+        <!-- Css personalizada do iGO -->
+        <link href="css/igostyle.css" rel="stylesheet">
+        <link href="css/myWeb.css" rel="stylesheet">
+
+        <!-- javascript do iGO-->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/igojquery.js" type="text/javascript"></script>
+
+    </head>
+    <body class="bg-light">
+
+        <div class="container">
+            <!-- navbar fixa -->
+            <nav class="navbar">
+                <ul>
+                    <li style="margin-top:8px"><span style="color: white;font-size:1.2em; margin-left:5px" id="Time"></span></li>
+                    <li style="width: 30px">&nbsp;</li>
+                    <li><a class="mweb" href="#home"><img src="images/logo20.png" /></a></li>
+                    <li><a href="#contact"><img src="images/bluetooth.png" /></a></li>
+                    <li><a href="#about"><img src="images/wifi.png" /></a></li>
+                </ul>
+            </nav>
+            <div class="search"> 
+                <div style="width:300px; height:35px;">
+                    <a onclick="goBack()" class="backButton">
+                        <img src="images/seta.png" height="35" width="30">
+                    </a>
+                    <div class="location">
+                        <p class="pagamento2" style="left:80px"> GoPlaces</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <img src="images/map.jpg"/>
+            <div class="table" id="menuGP">
+                <div class="table-row">
+                    <div  class="table-one-col" style="margin-top:-10px;">
+                        <p><a href="locGuard.html" title="Locais Guardados" class="link">Locais Guardados</a></p>
+                    </div>
+                    <div  class="table-one-col" style="margin-top:-10px;">
+                        <p><a href="locPart.html" title="Locais Partilhados" class="link">Locais Partilhados</a></p>
+                    </div>	
+                </div>
+                <div class="table-row">
+                    <div  class="table-one-col" style="margin-top:-50px;">
+                        <p><a href="findFriends.html" title="Encontrar Amigos" class="link">Encontrar Amigos</a></p>
+                    </div>
+                    <div  class="table-one-col" style="margin-top:-50px;">
+                        <p><a href="poi.html" title="Encontrar Pontos de Interesse" class="link">Encontrar Pontos de Interesse</a></p>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script>
+                function goBack() {
+                    window.history.back();
+                }
+        </script>
+    </body>
+</html>

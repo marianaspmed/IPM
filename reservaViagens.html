@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="iGO">
+        <meta name="author" content="Inês Alves, Mariana Medeiros, Miguel Silva">
+        <meta name="generator" content="Sublime">
+        <title>iGO</title>
+
+
+        <!-- Css personalizada do iGO -->
+        <link href="css/igostyle.css" rel="stylesheet">
+        <link href="css/myWeb.css" rel="stylesheet">
+        <link href="css/settings.css" rel="stylesheet">
+        <link href="css/viagens.css" rel="stylesheet">
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <!-- javascript do iGO-->
+        <script src="js/igojquery.js" type="text/javascript"></script>
+
+    </head>
+    <body class="bg-light">
+
+        <div class="container">
+            <!-- navbar fixa -->
+            <nav class="navbar">
+                <ul>
+                    <li style="margin-top:8px"><span style="color: white;font-size:1.2em; margin-left:5px" id="Time"></span></li>
+                    <li style="width: 30px">&nbsp;</li>
+                    <li><a class="mweb" href="#home"><img src="images/logo20.png" /></a></li>
+                    <li><a href="#contact"><img src="images/bluetooth.png" /></a></li>
+                    <li><a href="#about"><img src="images/wifi.png" /></a></li>
+                </ul>
+            </nav>
+            <div class="search"> 
+                <div style="width:300px; height:35px;">
+                    <a onclick="goBack()" class="backButton">
+                        <img src="images/seta.png" height="35" width="30">
+                    </a>
+                    <p class="pagamento2" style="font-size: 16px;width:200px;left: 55px;margin-top:20px;"> Reserva de Viagem</p> 
+                </div>
+            </div>
+            <div class="search">
+                <input type="text" class="searchTerm" placeholder="Onde vamos?" onclick="document.location.href='poi_search.html'">
+                <button type="submit" class="searchButton">
+                    <a href="poi_search.html"><img src="images/search.png"></a>
+                </button>
+            </div>
+            <select class="langs">
+                <option class="optionlangs" selected hidden>Continente</option>
+                <option class="optionlangs" value="europa">Europa</option>
+                <option class="optionlangs" value="asia">Ásia</option>
+                <option value="africa">África</option>
+                <option value="oceania">Oceania</option>
+                <option value="antartida">Antártida</option>
+                <option value="america">América</option>
+            </select>    
+            <select class="langs">
+                <option selected hidden>Clima</option>
+                <option value="tropical">Tropical</option>
+                <option value="maditerraneo">Mediterrâneo</option>
+                <option value="desertico">Desértico</option>
+                <option value="montanha">Montanha</option>
+                <option value="polar">Polar</option>
+            </select>
+            <select class="langs">
+                <option selected hidden>Transporte</option>
+                <option value="aviao">Avião</option>
+                <option value="comboio">Comboio</option>
+                <option value="autocarro">Autocarro</option>
+                <option value="carro">Carro</option>
+            </select> 
+            <div class="avancar">   
+            <a href="reservaTransporte.html">Avançar</a>
+            
+        </div>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </body>
+</html>

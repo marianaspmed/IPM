@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="iGO">
+        <meta name="author" content="Inês Alves, Mariana Medeiros, Miguel Silva">
+        <meta name="generator" content="Sublime">
+        <title>iGO</title>
+
+
+        <!-- Css personalizada do iGO -->
+        <link href="css/igostyle.css" rel="stylesheet">
+        <link href="css/myWeb.css" rel="stylesheet">
+        <link href="css/settings.css" rel="stylesheet">
+        <link href="css/reservaViagens.css" rel="stylesheet">
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <!-- javascript do iGO-->
+        <script src="js/igojquery.js" type="text/javascript"></script>
+
+    </head>
+    <body class="bg-light">
+
+        <div class="container">
+            <!-- navbar fixa -->
+            <nav class="navbar">
+                <ul>
+                    <li style="margin-top:8px"><span style="color: white;font-size:1.2em; margin-left:5px" id="Time"></span></li>
+                    <li style="width: 30px">&nbsp;</li>
+                    <li><a class="mweb" href="#home"><img src="images/logo20.png" /></a></li>
+                    <li><a href="#contact"><img src="images/bluetooth.png" /></a></li>
+                    <li><a href="#about"><img src="images/wifi.png" /></a></li>
+                </ul>
+            </nav>
+            <div class="search"> 
+                <div style="width:300px; height:35px;">
+                    <a onclick="goBack()" class="backButton">
+                        <img src="images/seta.png" height="35" width="30">
+                    </a>
+                    <div class="location">	
+                        <p class="pagamento2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filtro</p>		
+                    </div>
+                </div>
+            </div>
+            <br>
+            <select id="langs">
+                <option selected hidden>Destino</option>
+                <option value="franca">França</option>
+                <option value="eua">Estados Unidos</option>
+                <option value="spanish">Itália</option>
+            </select>
+            <br>    
+            <select id="langs">
+                <option selected hidden>Transporte</option>
+                <option value="franca">Avião</option>
+                <option value="eua">Comboio</option>
+                <option value="spanish">Autocarro</option>
+                <option value="spanish">Carro</option>
+                <option value="spanish">Outro</option>
+            </select>
+            <br>
+            <select id="langs">
+                <option selected hidden>Estação</option>
+                <option value="primavera">Primavera</option>
+                <option value="verao">Verão</option>
+                <option value="outono">Outono </option>
+                <option value="inverno">Inverno</option>
+            </select>
+            <br>
+            
+            <div class="categorias" id="info">
+                <a href="index.html"><img class="center" src="images/checkWhite2.png"></a>
+            </div>
+        </div>
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
+    </body>
+</html>

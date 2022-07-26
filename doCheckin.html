@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="iGO">
+        <meta name="author" content="Inês Alves, Mariana Medeiros, Miguel Silva">
+        <meta name="generator" content="Sublime">
+        <title>iGO</title>
+
+
+        <link href="css/igostyle.css" rel="stylesheet">
+        <link href="css/viagens.css" rel="stylesheet">
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/igojquery.js" type="text/javascript"></script>
+        <script src="js/iGO.js" type="text/javascript"></script>
+    </head>
+    <body class="bg-light">
+
+        <div class="container">
+            <!-- navbar fixa -->
+            <nav class="navbar">
+                <ul>
+                    <li style="margin-top:8px"><span style="color: white;font-size:1.2em; margin-left:5px" id="Time"></span></li>
+                    <li style="width: 30px">&nbsp;</li>
+                    <li><a class="mweb" href="index.html"><img src="images/home.svg" class="home" /></a></li>
+                    <li><a href="#contact"><img src="images/bluetooth.png" /></a></li>
+                    <li><a href="#about"><img src="images/wifi.png" /></a></li>
+                </ul>
+            </nav>
+
+            <div class="checkinAviso">
+                <p>Já pode efetuar o check-in para a sua viagem:</p>
+            </div>
+            <!-- <div id="titleLoc">
+                <h3 align="center"><span id="origem"></span><img src="images/arrowTravel.png"><span id="destino"></span></h3>
+            </div> -->
+            <div class="dois_botoes">
+                <button onclick="location.replace('dadosUtilizador.html')" class="castanho">Fazer agora</button>
+                <button onclick="location.replace('index.html')" class="castanho">Fazer mais tarde</button>  
+            </div>
+                      
+            
+        </div>
+        <script >
+            function mostraItenerario()
+{
+var ori = document.getElementById("origem");
+var dest = document.getElementById("destino");
+ori.innerHTML = getCookie("origem");
+dest.innerHTML = getCookie("destino");
+}       
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+        </script>
+    </body>
+</html>

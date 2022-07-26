@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="iGO">
+        <meta name="author" content="Inês Alves, Mariana Medeiros, Miguel Silva">
+        <meta name="generator" content="Sublime">
+        <title>iGO</title>
+
+
+        <link href="css/igostyle.css" rel="stylesheet">
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/igojquery.js" type="text/javascript"></script>
+        <script src="js/iGO.js" type="text/javascript"></script>
+
+    </head>
+    <body class="bg-light">
+
+        <div class="container">
+            <!-- navbar fixa -->
+            <nav class="navbar">
+				<ul>
+					<li style="margin-top:8px"><span style="color: white;font-size:1.2em; margin-left:5px" id="Time"></span></li>
+					<li style="width: 30px">&nbsp;</li>
+		  			<li><a class="mweb" href="index.html"><img src="images/home.svg" class="home" /></a></li>
+		  			<li><a href="#contact"><img src="images/bluetooth.png" /></a></li>
+		  			<li><a href="#about"><img src="images/wifi.png" /></a></li>
+				</ul>
+			</nav>
+            <div class="header"> 
+                <button onclick="goBack()"><img src="images/seta.png" class="seta_voltar"></button>
+                <p>Kaffeine</p>	
+            </div>
+
+            <div class="alerta">
+                <h3>Horário: 20H - 04H</h3>
+                <table style="margin-top:-20px;margin-bottom: -10px;text-align: left;">
+                    <tr>
+                        <td><img src="images/pin.png" height="35" width="35"></td>
+                        <td><p>66 Great Titchfield St, Fitzrovia, London </p></td> 
+                    </tr>
+                </table>
+            </div>
+            <div class="dois_botoes">
+                <button onclick="window.location='escolha_transportes.html'">Obter direções</button>
+            </div>
+            
+        </div>
+    </body>
+</html>

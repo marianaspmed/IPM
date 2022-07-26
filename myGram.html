@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="iGO">
+        <meta name="author" content="Inês Alves, Mariana Medeiros, Miguel Silva">
+        <meta name="generator" content="Sublime">
+        <title>iGO</title>
+
+        <link href="css/igostyle.css" rel="stylesheet">
+        <link href="css/myWeb.css" rel="stylesheet">
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/igojquery.js" type="text/javascript"></script>
+        <script src="js/iGO.js" type="text/javascript"></script>
+
+    </head>
+    <body class="bg-light">
+
+        <div class="container">
+            <!-- navbar fixa -->
+            <nav class="navbar">
+                <ul>
+                    <li style="margin-top:8px"><span style="color: white;font-size:1.2em; margin-left:5px" id="Time"></span></li>
+                    <li style="width: 30px">&nbsp;</li>
+                    <li><a class="mweb" href="index.html"><img class="home" src="images/home.svg" /></a></li>
+                    <li><a href="#contact"><img src="images/bluetooth.png" /></a></li>
+                    <li><a href="#about"><img src="images/wifi.png" /></a></li>
+                </ul>
+            </nav>
+            <div class="search" id="barra"> 
+                <div style="width:300px; height:35px;">
+                    <a onclick="goBack()" class="backButton">
+                        <img src="images/seta.png" height="35" width="30">
+                    </a>
+                    <div class="location">
+                        <p class="pagamento2" style="left:80px"> MyGram</p>
+                        <a onclick="publicar('mural','escolherFoto')"><img src="images/mygram.png" class="camera"></a> 
+                    </div>
+                </div>
+            </div>
+            <!-- Ecrã inicial myGram -->
+            <div class="feed" id="mural">
+                <div class="container2">
+                    <img src="images/woman1.jpeg" class="foto">
+                    <h3>Sara Matos</h3> 
+                    <img src="images/paris.jpeg" class="foto1">
+                    <p>I love this city #holidays</p>
+     				<img src="images/unlike.png" id="like1" class="like" 
+     				onclick="mudaimagem(id,'like.png','unlike.png')" >
+                    <span class="time-left">11:01</span>  
+                </div>
+                <div class="container2">
+                    <img src="images/man2.jpeg" class="foto">
+				    <h3>João André</h3> 
+					<img src="images/barcelona.jpg" class="foto1">
+                    <p>I'm enjoying so much my holidays here in Barcelona</p>
+                    <img src="images/unlike.png" id="like2" class="like" 
+     				onclick="mudaimagem(id,'like.png','unlike.png')" >
+                    <span class="time-left">11:02</span>
+                </div>
+            </div>
+           
+            <!-- Ecrã escolha de foto -->
+            <div  class="galeria" id="escolherFoto">
+                <div class="search"> 
+                <div style="width:300px; height:35px;">
+                    <a onclick="publicar('mural','escolherFoto')" class="backButton">
+                        <img src="images/seta.png" height="35" width="30">
+                    </a>
+                    <div class="location">
+                        <p class="pagamento2" style="left:50px"> Escolha uma foto</p>
+                    </div>
+                </div>
+                </div>
+                <div class="fotografias">
+                    <div class="container2">
+                        <a ><img id="berlin" onclick="comentar(id)" class="retrato" src="images/places/berlin.jpg"></a>
+                        <p>Berlim</p>   
+                    </div>
+                    <div class="container2">
+                        <a><img id="brazil" onclick="comentar(id)"class="retrato" src="images/places/brazil.jpg"></a>
+                        <p>Brasil</p>   
+                    </div>
+                    <div class="container2">
+                        <a><img id="dubai" onclick="comentar(id)" class="retrato" src="images/places/dubai.jpg"></a>
+                        <p>Dubai</p>   
+                    </div>
+                    <div class="container2">
+                        <a><img id="greece" onclick="comentar(id)" class="retrato" src="images/places/greece.jpg"></a>
+                        <p>Grécia</p>   
+                    </div>
+                    <div class="container2">
+                        <a><img id="hongkong" onclick="comentar(id)" class="retrato" src="images/places/hongkong.jpg"></a>
+                        <p>Hong Kong</p>   
+                    </div>
+                    <div class="container2">
+                        <a><img id="macau" onclick="comentar(id)" class="retrato" src="images/places/macau.jpg"></a>
+                        <p>Macau</p>   
+                    </div>
+                    <div class="container2">
+                        <a><img id="miami" onclick="comentar(id)" class="retrato" src="images/places/miami.jpg"></a>
+                        <p>Miami</p>   
+                    </div>
+                    <div class="container2">
+                        <a><img id="morocco" onclick="comentar(id)" class="retrato" src="images/places/morocco.jpg"></a>
+                        <p>Marrocos</p>   
+                    </div>
+                    <div class="container2">
+                        <a><img id="sidney" onclick="comentar(id)" class="retrato" src="images/places/sidney.jpg"></a>
+                        <p>Sidney</p>   
+                    </div>
+                 
+                </div>
+            </div>
+             <!-- Ecrã publicar -->
+             <div class="comentar" id="comentario" >
+                <div class="search"> 
+                <div style="width:300px; height:35px;margin-top:  -10px;">
+                    <a onclick="escolhaFoto()" class="backButton">
+                        <img src="images/seta.png" height="35" width="30">
+                    </a>
+                    <p class="pagamento2"> Descrição</p>        
+                    <button type="submit" class="searchButton">
+                        <a onclick="concluir()"><img src="images/sendw.png" height="28" width="28"></a>
+                    </button>
+                </div>
+                </div>
+                <form id="form" onsubmit="return false;">
+                    <input id="descricao" type="text" style="height: 30px;width: 225px;font-size: 20px;" >
+                </form>
+                <img src="images/t9.png" class="t9">   
+            </div>
+               
+    </div>
+    <script>
+        function mudaimagem(img_id,imagem1,imagem2){
+		var imag = document.getElementById(img_id);
+		if(imag.src.substring(imag.src.lastIndexOf('/')+1) == imagem1) // substring exrai só o nome do ficheiro e testa se a imagem é like ou liked
+            imag.src='images/'+imagem2;
+		else
+			imag.src='images/'+imagem1;
+        }
+        function publicar(id1,id2) {
+  		var x = document.getElementById(id1);
+        var y = document.getElementById(id2);
+        var z= document.getElementById('barra');
+  		if (x.style.display == "none"){
+                x.style.display = "block";
+                y.style.display="none";
+                z.style.display="block";}
+  		else {
+            x.style.display = "none";
+            y.style.display="block";
+            z.style.display="none"}
+        }
+        var foto;
+        function concluir(){
+            var new_photo=document.createElement('div');
+            var escrever = document.getElementById("descricao").value;
+            new_photo.className = 'container2';
+            var caminho=document.getElementById(foto).src;
+            var  hours = new Date().getHours();
+			var minutes = new Date().getMinutes();
+			var hora=hours+':'+minutes;
+            new_photo.innerHTML ='<img src="images/perfil.jpg" id="foto_perfil" class="foto">\
+            <h3 id="nome_perfil">Cristina Oliveira</h3> \
+            <img src="'+caminho+'" id="foto_publicada" class="foto1">\
+            <p id="texto">'+escrever+'</p>\
+            <img src="images/unlike.png" id="'+escrever+'" class="like" onclick="mudaimagem('+escrever+',"like.png","unlike.png")">\
+                    <span class="time-left">'+hora+'</span>'; 
+            var feed = document.getElementById('mural');
+            feed.appendChild(new_photo);
+            publicar('mural','comentario');}
+        function comentar(id){
+            foto = id;
+            var x = document.getElementById('escolherFoto');
+            var y = document.getElementById('comentario');
+            x.style.display = "none";
+            y.style.display="block"
+        }
+        function escolhaFoto(){
+        var x = document.getElementById('comentario');
+        var y = document.getElementById('escolherFoto');
+        x.style.display = "none";
+        y.style.display="block";    
+        }
+    </script>
+    </body>
+</html>

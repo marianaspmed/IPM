@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="iGO">
+        <meta name="author" content="Inês Alves, Mariana Medeiros, Miguel Silva">
+        <meta name="generator" content="Sublime">
+        <title>iGO</title>
+
+
+        <link href="css/igostyle.css" rel="stylesheet">
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/igojquery.js" type="text/javascript"></script>
+        <script src="js/iGO.js" type="text/javascript"></script>
+
+    </head>
+    <body class="bg-light">
+
+        <div class="container">
+            <!-- navbar fixa -->
+            <nav class="navbar">
+				<ul>
+					<li style="margin-top:8px"><span style="color: white;font-size:1.2em; margin-left:5px" id="Time"></span></li>
+					<li style="width: 30px">&nbsp;</li>
+		  			<li><a class="mweb" href="index.html"><img src="images/home.svg" class="home" /></a></li>
+		  			<li><a href="#contact"><img src="images/bluetooth.png" /></a></li>
+		  			<li><a href="#about"><img src="images/wifi.png" /></a></li>
+				</ul>
+			</nav>
+            <div class="search"> 
+                <div style="width:300px; height:35px;">
+                    <a onclick="goBack()" class="backButton">
+                        <img src="images/seta.png" height="35" width="30">
+                    </a>
+                    <div class="location">
+                        <img class="pin" src="images/walkman.png" height="35" width="35">	
+                        <p class="towerHill"> Direções a pé</p>	
+                    </div>
+                </div>
+            </div>
+
+            <div class="direcPe" >
+                <table>
+                    <tr><td><img src="images/arrowUp.png"  height="25" width="20">Siga para norte 82 pés</td></tr>
+
+                    <tr><td><img src="images/arrowLeft.png"  height="25" width="20">Vire à esquerda 102 pés</td> </tr>
+                    
+                    <tr><td><img src="images/arrowRight.png"  height="25" width="20">Vire à direita. Suba as escadas 262 pés.</td></tr>
+                    <tr><td><img src="images/arrowLeft.png"  height="25" width="20">Vire à esquerda, em direção à Tower Bridge. Suba pelas escadas 0.4 milhas</td></tr>
+                </table>
+            </div>
+            <div class="dois_botoes">
+                <button onclick="window.location='index.html'">Terminar</button>
+            </div>
+        </div>
+    </body>
+</html>

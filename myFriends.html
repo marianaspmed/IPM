@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="iGO">
+        <meta name="author" content="Inês Alves, Mariana Medeiros, Miguel Silva">
+        <meta name="generator" content="Sublime">
+        <title>iGO</title>
+
+        <link href="css/igostyle.css" rel="stylesheet">
+        <link href="css/myWeb.css" rel="stylesheet">
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/igojquery.js" type="text/javascript"></script>
+        <script src="js/iGO.js" type="text/javascript"></script>
+        
+    </head>
+    <body class="bg-light">
+
+    <div class="container">
+            <!-- navbar fixa -->
+            <nav class="navbar">
+                <ul>
+                    <li style="margin-top:8px"><span style="color: white;font-size:1.2em; margin-left:5px" id="Time"></span></li>
+                    <li style="width: 30px">&nbsp;</li>
+                    <li><a class="mweb" href="index.html"><img class="home" src="images/home.svg" /></a></li>
+                    <li><a href="#contact"><img src="images/bluetooth.png" /></a></li>
+                    <li><a href="#about"><img src="images/wifi.png" /></a></li>
+                </ul>
+            </nav>
+
+         <!-- ecra amigos -->  
+          
+        <div id="ecra1" style="display: block;">   
+            <div class="search"> 
+                <div style="width:300px; height:35px;">
+                    <a href="menuMyWeb.html" class="backButton">
+                        <img src="images/seta.png" height="35" width="30">
+                    </a>
+                    <div class="location">	
+                        <p class="pagamento2"> MyFriends</p>		
+                    </div>
+                    <button type="submit" class="searchButton">
+                        <a onclick="alterna('ecra1','ecra2')"><img src="images/plus.png" height="28" width="28"></a>
+                    </button>
+                </div>
+            </div>
+            <div class="lista2" id="lista_amigos">
+                <div class="amizade" id="amigo1" >
+                    <a href="JoseSoaresProfile.html"><img class="miniatura" src="images/man1.jpeg" ><p>José Soares</p> </a><button onclick="deleteFriend('amigo1')"><img  class="lixo" src="images/delete.png"></button> 
+                </div>
+                <div class="amizade" id="amigo2" >
+                    <a href="CatarinaMonteiroProfile.html"><img class="miniatura" src="images/woman3.jpeg"><p>Catarina Monteiro</p></a><button onclick="deleteFriend('amigo2')"><img  class="lixo" src="images/delete.png"></button> 
+                </div>
+                <div class="amizade" id="amigo3" >
+                    <a href="MiguelMartinsProfile.html"><img class="locais" src="images/man3.jpeg" id="arredondado"><p>Miguel Martins</p></a><button onclick="deleteFriend('amigo3')"><img  class="lixo" src="images/delete.png"></button> 
+                </div>
+                <div class="amizade" id="amigo4" >
+                    <a href="JuditeSousaProfile.html"><img class="locais" src="images/woman2.jpeg" id="arredondado"><p>Judite Sousa</p></a><button onclick="deleteFriend('amigo4')"><img  class="lixo" src="images/delete.png"></button> 
+                </div>
+                <div class="amizade" id="amigo5" >
+                    <a href="JoaoAndreProfile.html"><img class="locais" src="images/man2.jpeg" id="arredondado"><p>João André</p></a><button onclick="deleteFriend('amigo5')"><img  class="lixo" src="images/delete.png"></button> 
+                </div>
+                <div class="amizade" id="amigo6" >
+                    <a href="SaraMatosProfile.html"><img class="locais" src="images/woman1.jpeg" id="arredondado"><p>Sara Matos</p></a><button onclick="deleteFriend('amigo6')"><img  class="lixo" src="images/delete.png"></button> 
+                </div>
+                <div class="amizade" id="amigo7" >
+                    <a href="DiogoFerreiraProfile.html"><img class="locais" src="images/diogof.jpg" id="arredondado"><p>Diogo Ferreira</p></a><button onclick="deleteFriend('amigo7')"><img  class="lixo" src="images/delete.png"></button> 
+                </div>
+            </div>
+        </div>
+
+        <!-- ecra adicionar amigo -->
+        <div id="ecra2" style="display: none;">
+        <div class="search"> 
+            <div style="width:300px; height:35px;">
+                <a onclick="alterna('ecra2','ecra1')" class="backButton">
+                    <img src="images/seta.png" height="35" width="30">
+                    </a>
+                <div class="location">  
+                    <p class="pagamento2"> AddFriends</p>        
+                </div>
+            </div>
+        </div>
+        <div class="caixa_pesquisa">
+            <input type="text" class="searchTerm" >
+        </div>
+        <div class="lista_pessoas">
+                <div class="pessoa" id="pessoa1" >
+                    <a href="Profile1.html"><img class="miniatura1" src="images/carlota.jpeg"></a><p>Carlota Joaquina</p><button onclick="addFriend('pessoa1')"><img  class="mais" src="images/plus.png"></button> 
+                </div> 
+                <div class="pessoa" id="pessoa2" >
+                    <a href="Profile2.html"><img class="miniatura1" src="images/raimundo.jpg"></a>
+                    <p>Raimundo Neves</p><button onclick="addFriend('pessoa2')"><img  class="mais" src="images/plus.png"></button> 
+                </div>
+                <div class="pessoa" id="pessoa3" >
+                    <a href="Profile3.html"><img class="miniatura1" src="images/fausto.jpg"></a><p>Fausto Dias</p><button onclick="addFriend('pessoa3')"><img  class="mais" src="images/plus.png"></button> 
+                </div>
+                <div class="pessoa" id="pessoa4" >
+                    <a href="Profile4.html"><img class="miniatura1" src="images/gertrudes.jpg"></a><p>Gertrudes dos Santos</p><button onclick="addFriend('pessoa4')"><img  class="mais" src="images/plus.png"></button> 
+                </div>
+                <div class="pessoa" id="pessoa5" >
+                    <a href="Profile5.html"><img class="miniatura1" src="images/florbela.jpg"></a><p>Florbela Espanca</p><button onclick="addFriend('pessoa5')"><img  class="mais" src="images/plus.png"></button> 
+                </div>
+                <div class="pessoa" id="pessoa6" >
+                    <a href="Profile6.html"><img class="miniatura1" src="images/amalia.jpg"></a><p>Amália Jesus</p><button onclick="addFriend('pessoa6')"><img  class="mais" src="images/plus.png"></button> 
+                </div>
+                <div class="pessoa" id="pessoa7" >
+                    <a href="Profile7.html"><img class="miniatura1" src="images/rute.jpg"></a><p>Rute Marlene</p><button onclick="addFriend('pessoa7')"><img  class="mais" src="images/plus.png"></button> 
+                </div>
+                <div class="pessoa" id="pessoa8" >
+                    <a href="Profile8.html"><img class="miniatura1" src="images/joao.jpg"></a><p>João Só</p><button onclick="addFriend('pessoa8')"><img  class="mais" src="images/plus.png"></button> 
+                </div>
+                <div class="pessoa" id="pessoa9" >
+                    <a href="Profile9.html"><img class="miniatura1" src="images/tiago.jpg"></a><p>Tiago Bettencourt</p><button onclick="addFriend('pessoa9')"><img  class="mais" src="images/plus.png"></button> 
+                </div>
+                <div class="pessoa" id="pessoa10" >
+                    <a href="Profile10.html"><img class="miniatura1" src="images/mateus.png"></a><p>Mateus Rosa</p><button onclick="addFriend('pessoa10')"><img  class="mais" src="images/plus.png"></button> 
+                </div>
+                <div class="pessoa" id="pessoa11" >
+                    <a href="Profile11.html"><img class="miniatura1" src="images/acacio.png"></a><p>Acácio Machado</p><button onclick="addFriend('pessoa11')"><img  class="mais" src="images/plus.png"></button> 
+                </div>
+                <div class="pessoa" id="pessoa12" >
+                    <a href="Profile12.html"><img class="miniatura1" src="images/rosa.jpg"></a><p>Rosa Grilo</p><button onclick="addFriend('pessoa12')"><img  class="mais" src="images/plus.png"></button> 
+                </div>
+             </div>
+        </div>
+
+        <!-- ecra confirmacao -->
+        <div id="ecra3" style="display: none;">  
+        </div>
+
+    </div>
+    <script>
+        var id_exterminar;
+        var ecra3_child;
+        function alterna(id1,id2){
+            var x = document.getElementById(id1);
+            var y = document.getElementById(id2);
+            x.style.display = "none";
+            y.style.display="block";
+        }
+        function addFriend(id){
+            var p=document.getElementById(id);
+            var nome=p.getElementsByTagName('p')[0].innerHTML;
+            var link=p.getElementsByTagName('a')[0].innerHTML;
+            var ref=p.getElementsByTagName('a')[0].getAttribute('href');
+            var img=link.replace("1","");
+            var new_friend=document.createElement('div');
+            new_friend.className="amizade";
+            new_id=nome.replace(/\s/g, '');
+            new_friend.id=new_id;
+            new_friend.innerHTML='<a href="'+ref+'">'+img+'<p>'+nome+'</p></a><button onclick="deleteFriend("'+new_id+'");"><img  class="lixo" src="images/delete.png"></button>';
+            var mural = document.getElementById('lista_amigos');
+            mural.appendChild(new_friend);
+            deleteDiv(id);
+        }
+        function confirmacao_eliminar(id){
+        var alerta=document.createElement('div');
+        alerta.id='xauxau';
+        ecra3_child=alerta.id;
+        var amigo=document.getElementById(id_exterminar);
+        var exterminado=amigo.getElementsByTagName('p')[0].innerHTML;
+        alerta.innerHTML='<img class="center" src="images/warning.svg" height="60" width="60">\
+               <p class="msg">  Deseja eliminar '+exterminado+'? </p>\
+               <table class="aviso" id="warning">\
+                   <tr>\
+                       <td><a onclick="deleteFriend_aux()" class="yes">Sim</a></td>\
+                       <td><a onclick="abort()" class="no">Não</a></td>\
+                   </tr>\</table>'
+        var ecra=document.getElementById(id);
+        ecra.appendChild(alerta);}
+        function abort(){
+            deleteDiv(ecra3_child);
+            alterna("ecra3","ecra1");
+        }
+        function confirmacao_adicio(){}
+        
+        function deleteFriend_aux(){
+            deleteDiv(id_exterminar);
+            alterna('ecra3','ecra1');
+            deleteDiv(ecra3_child);
+        }
+        function deleteFriend(id){
+            id_exterminar=id;
+            alterna('ecra1','ecra3');
+            confirmacao_eliminar('ecra3');
+        }
+
+    </script>
+    </body>
+</html>
